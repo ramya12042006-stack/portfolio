@@ -2,7 +2,7 @@
 
 const framesCount = 240;
 const images = [];
-let currentFrame = index => `frame/ezgif-frames-${String(index).padStart(3, '0')}.jpg`;
+let currentFrames = index => `frames/ezgif-frames-${String(index).padStart(3, '0')}.jpg`;
 
 const canvas = document.getElementById('animationCanvas');
 const context = canvas.getContext('2d');
@@ -10,7 +10,7 @@ const context = canvas.getContext('2d');
 // Preload images
 for (let i = 1; i <= framesCount; i++) {
     const img = new Image();
-    img.src = currentFrame(i);
+    img.src = currentFrames(i);
     images.push(img);
 }
 
@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
         Math.floor(scrollFraction * framesCount)
     );
 
-    requestAnimationFrame(() => render(framesIndex));
+    requestAnimationFrames(() => render(framesIndex));
 });
 
 // Initial render
