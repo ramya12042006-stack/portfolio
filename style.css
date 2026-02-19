@@ -1,0 +1,31 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: #111;
+}
+
+.scroll-container {
+    height: 5000px; /* Increase scroll area to control animation */
+    width: 100%;
+    position: relative;
+}
+
+canvas {
+    position: fixed; /* Stays on screen while scrolling */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    max-width: 1000px;
+    max-height: 600px;
+}
